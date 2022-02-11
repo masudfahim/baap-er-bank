@@ -1,9 +1,9 @@
-function getInputValue() {
-    const depositInput = document.getElementById('deposit-input');
-    const depositAmounttext = depositInput.value;
-    const depositAmount = parseFloat(depositAmounttext);
-    depositInput.value = '';
-    return depositAmount;
+function getInputValue(inputid) {
+    const inputField = document.getElementById(inputid);
+    const inputAmountText = inputField.value;
+    const inputValue = parseFloat(inputAmountText);
+    inputField.value = '';
+    return inputValue;
 }
 
 
@@ -19,7 +19,7 @@ document.getElementById('deposit-button').addEventListener('click', function () 
     // const depositInput = document.getElementById('deposit-input');
     // const depositAmounttext = depositInput.value;
     // const depositAmount = parseFloat(depositAmounttext);
-    const depositAmount = getInputValue();
+    const depositAmount = getInputValue('deposit-input');
 
     // current deposit 
     const depositTotal = document.getElementById('deposit-total');
@@ -39,12 +39,13 @@ document.getElementById('deposit-button').addEventListener('click', function () 
 })
 
 
-// withdrow balance 
+// withdrow account 
 
 document.getElementById('withdrow-button').addEventListener('click', function () {
-    const withdrowinput = document.getElementById('withdrow-input');
-    const withdrowAmountText = withdrowinput.value;
-    const withdrowAmount = parseFloat(withdrowAmountText);
+    // const withdrowinput = document.getElementById('withdrow-input');
+    // const withdrowAmountText = withdrowinput.value;
+    // const withdrowAmount = parseFloat(withdrowAmountText);
+    const withdrowAmount = getInputValue('withdrow-input');
 
     // withdrow 
     const withdrowTotal = document.getElementById('withdrow-total');
